@@ -9,6 +9,8 @@ The objective of this project is to demonstrate practical SQL skills by transfor
 Check out the SQL queries and the insights here : [project_sql folder](sql_project)
 
 ---
+## 🗺️ Database Schema
+<img width="1494" height="692" alt="Database Schema" src="https://github.com/user-attachments/assets/86361e72-894b-427d-9a31-2ae2cf61a2e7" />
 
 ## 🎯 Business Questions
 
