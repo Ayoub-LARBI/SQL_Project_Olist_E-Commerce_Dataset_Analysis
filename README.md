@@ -6,6 +6,8 @@ This project analyzes the **Olist Brazilian E-Commerce Dataset** using **Postgre
 
 The objective of this project is to demonstrate practical SQL skills by transforming raw transactional data into actionable business insights through data exploration, aggregations, joins, CTEs, window functions, and KPI analysis.
 
+Check out the SQL queries and the insights here : [project_sql folder](sql_project)
+
 ---
 
 ## 🎯 Business Questions
