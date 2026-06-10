@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "olist_dataset",
+            "group": "postgres",
+            "database": "olist_dataset",
+            "username": "postgres"
+        }
+    ]
+}
