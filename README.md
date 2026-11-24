@@ -8,7 +8,7 @@ The objective of this project is to demonstrate practical SQL skills by transfor
 
 Check out the SQL queries and the insights here : [project_sql folder](sql_project)
 
-A Power BI dashboard built on these queries is in a separate repository: [Olist Power BI dashboard]([ADD-YOUR-DASHBOARD-REPO-URL](https://github.com/Ayoub-LARBI/PowerBI_Project_Olist_E-Commerce_Dataset_Analysis)).
+A Power BI dashboard built on these queries is in a separate repository: [Olist Power BI dashboard]((https://github.com/Ayoub-LARBI/PowerBI_Project_Olist_E-Commerce_Dataset_Analysis)).
 
 ---
 ## 🗺️ Database Schema
