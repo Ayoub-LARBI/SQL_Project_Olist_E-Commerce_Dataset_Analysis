@@ -212,6 +212,10 @@ ON order_reviews(order_id);
 CREATE INDEX idx_products_category
 ON products(product_category_name);
 
+-- NOTE: COPY reads files on the database server, so it needs absolute paths.
+-- Edit the paths below to where you saved the csv_files folder, or run the
+-- same commands with psql's \copy and relative paths (csv_files/<file>.csv).
+
 copy customers
 FROM 'D:\SQL_Project_Olist_E-Commerce_Dataset_Analysis\csv_files\olist_customers_dataset.csv'
 DELIMITER ','

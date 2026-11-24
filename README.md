@@ -8,6 +8,8 @@ The objective of this project is to demonstrate practical SQL skills by transfor
 
 Check out the SQL queries and the insights here : [project_sql folder](sql_project)
 
+A Power BI dashboard built on these queries is in a separate repository: [Olist Power BI dashboard](ADD-YOUR-DASHBOARD-REPO-URL).
+
 ---
 ## 🗺️ Database Schema
 <img width="1494" height="692" alt="Database Schema" src="https://github.com/user-attachments/assets/86361e72-894b-427d-9a31-2ae2cf61a2e7" />
@@ -128,6 +130,15 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 ---
 
+## ▶️ How to Run
+
+1. Create a PostgreSQL database and download the CSV files from the Kaggle link above into `csv_files/`.
+2. Open `sql_load/data_load.sql`. The `COPY` commands read from absolute paths on the database server, so edit them to match where you saved `csv_files/`, or run them with psql's `\copy` and relative paths.
+3. Run `sql_load/data_load.sql` to create and load the tables.
+4. Run the scripts in `sql_project/` in order (`01` to `06`). The `.md` file next to each script has its results and insights.
+
+---
+
 ## 🧠 SQL Skills Demonstrated
 
 ### 🔹 Data Exploration
@@ -166,7 +177,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 ### 💰 Revenue Insights
 
-* Marketplace revenue exceeded **R$16 million**
+* Recorded payments totaled **R$16.0 million** (R$15.4M from delivered orders)
 * Revenue grew significantly throughout 2017 and 2018
 * November 2017 generated the highest monthly revenue
 * Average order value was approximately **R$161**
@@ -181,7 +192,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 ### 👥 Customer Insights
 
 * São Paulo generated approximately **37% of total revenue**
-* More than **93,000 customers made only one purchase**
+* **93,099 of 96,096 unique customers (about 97%)** bought only once
 * Repeat customers account for a relatively small portion of the customer base
 * Revenue is concentrated in Brazil's largest economic regions
 
@@ -198,7 +209,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 * Nearly **58% of reviews are 5-star ratings**
 * On-time deliveries average **4.29 stars**
 * Late deliveries average only **2.57 stars**
-* Delivery performance has a major impact on customer satisfaction
+* Late deliveries are associated with much lower ratings (observational data)
 
 ---
 
@@ -206,7 +217,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 ### 📦 Improve Delivery Performance
 
-Late deliveries have the strongest negative impact on customer satisfaction.
+Late delivery is the factor most strongly associated with low ratings in this analysis.
 
 Focus on:
 
@@ -237,6 +248,17 @@ Focus on improving customer experience in categories such as:
 ### 📈 Scale Best Practices
 
 Study top-performing sellers and highly rated product categories to identify successful operational practices that can be replicated across the marketplace.
+
+---
+
+## ⚠️ Limitations
+
+* Observational data: findings describe associations, not causes.
+* Revenue is not profit: the dataset has no cost data.
+* Monthly, yearly and state revenue use `payment_value` across all order statuses (R$16.0M, of which R$15.4M comes from delivered orders). Category, product and seller revenue use item price excluding freight, so those totals are lower.
+* Sep and Oct 2018 contain very few orders because the dataset ends in mid-October 2018, and 2016 is sparse. Treat both ends of the time series with caution.
+* `customer_id` is unique per order, so customer analysis uses `customer_unique_id`.
+* Seller segments (Top, High, Medium, Small) use fixed revenue cut-offs, not statistical groups.
 
 ---
 
